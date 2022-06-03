@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">ShoeStoreProject</string>
+    <string name="button">Button</string>
+    <string name="singup">Singup</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_shoestore">Welcome to ShoeStore</string>
+    <string name="the_shoe_store_with_all_the_latest_goodies_in_sports">The Shoe Store with all the latest goodies in sports</string>
+    <string name="please_click_to_continue">Please click to continue</string>
+    <string name="continue_">Continue</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="test">Test</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
 </resources>

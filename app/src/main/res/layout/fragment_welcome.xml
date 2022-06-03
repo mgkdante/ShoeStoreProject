@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:gravity="center"
+            android:text="@string/welcome_to_shoestore"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="51dp" />
+
+        <TextView
+            android:id="@+id/welcomeTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:gravity="center"
+            android:text="@string/the_shoe_store_with_all_the_latest_goodies_in_sports"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="417dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/continue_"
+            />
+
+    </LinearLayout>
+</layout>

@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestoreproject.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.shoestoreproject.onboarding.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.example.shoestoreproject.instructions.InstructionsFragment"
+        android:label="InstructionsFragment"
+        tools:layout="@layout/fragment_instructions">
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.example.shoestoreproject.shoeListing.ShoeListingFragment"
+        android:label="ShoeListingFragment"
+        tools:layout="@layout/fragment_instructions">
+        <action
+            android:id="@+id/action_shoeListingFragment_to_newShoeFragment"
+            app:destination="@id/newShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newShoeFragment"
+        android:name="com.example.shoestoreproject.newShoe.newShoeFragment"
+        android:label="newShoeFragment"
+        tools:layout="@layout/fragment_new_shoe"/>
 </navigation>

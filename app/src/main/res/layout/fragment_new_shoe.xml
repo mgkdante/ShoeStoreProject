@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".newShoe.newShoeFragment">
+
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:hint="@string/name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/companyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:hint="@string/company"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/sizeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:hint="@string/size"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:hint="@string/description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="200dp" />
+
+
+</LinearLayout>
+</layout>
