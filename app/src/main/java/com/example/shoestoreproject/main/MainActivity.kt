@@ -1,7 +1,8 @@
-package com.example.shoestoreproject
+package com.example.shoestoreproject.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.shoestoreproject.R
 
 
 class MainActivity : AppCompatActivity() {

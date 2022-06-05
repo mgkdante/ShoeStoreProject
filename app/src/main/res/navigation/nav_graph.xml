@@ -41,10 +41,19 @@
         <action
             android:id="@+id/action_shoeListingFragment_to_newShoeFragment"
             app:destination="@id/newShoeFragment" />
+        <argument
+            android:name="shoe"
+            app:argType="com.example.shoestoreproject.models.Shoe"
+            app:nullable="true"
+            android:defaultValue="@null"/>
     </fragment>
     <fragment
         android:id="@+id/newShoeFragment"
-        android:name="com.example.shoestoreproject.newShoe.newShoeFragment"
+        android:name="com.example.shoestoreproject.newShoe.NewShoeFragment"
         android:label="newShoeFragment"
-        tools:layout="@layout/fragment_new_shoe"/>
+        tools:layout="@layout/fragment_new_shoe">
+        <action
+            android:id="@+id/action_newShoeFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
 </navigation>
