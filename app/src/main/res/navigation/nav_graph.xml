@@ -11,7 +11,9 @@
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -41,11 +43,6 @@
         <action
             android:id="@+id/action_shoeListingFragment_to_newShoeFragment"
             app:destination="@id/newShoeFragment" />
-        <argument
-            android:name="shoe"
-            app:argType="com.example.shoestoreproject.models.Shoe"
-            app:nullable="true"
-            android:defaultValue="@null"/>
     </fragment>
     <fragment
         android:id="@+id/newShoeFragment"
@@ -54,6 +51,8 @@
         tools:layout="@layout/fragment_new_shoe">
         <action
             android:id="@+id/action_newShoeFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>

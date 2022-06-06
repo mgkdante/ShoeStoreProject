@@ -7,25 +7,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.navArgs
 import com.example.shoestoreproject.main.ActivityViewModel
 import com.example.shoestoreproject.R
-import com.example.shoestoreproject.main.ShoeListingViewModelFactory
 import com.example.shoestoreproject.databinding.FragmentShoeListingBinding
-import com.example.shoestoreproject.models.Shoe
+import com.example.shoestoreproject.databinding.ListItemViewBinding
 
 
 class ShoeListingFragment : Fragment() {
+
+
     private lateinit var binding: FragmentShoeListingBinding
-    private val shoeList = mutableListOf<Shoe>()
+
+    private val activityViewModel: ActivityViewModel by activityViewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing, container, false)
 
@@ -39,18 +42,25 @@ class ShoeListingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.linearLayoutList
 
+        activityViewModel.shoeList.observe(viewLifecycleOwner) {
 
+            activityViewModel.shoeList.value?.forEach {
+                val itemBinding = ListItemViewBinding.inflate(
+                    LayoutInflater.from(requireContext()),
+                    binding.linearLayoutList,
+                    false
+                )
+                itemBinding.CompanyView.text = it.company
+                itemBinding.nameView.text = it.name
+                itemBinding.sizeView.text = it.size.toString()
+                itemBinding.descriptionView.text = it.description
 
-        //DIRECT TRANSFER OF DATA (RECEIVER)
-        /*     val addedShoe by navArgs<ShoeListingFragmentArgs>()
+                binding.linearLayoutList.addView(itemBinding.root)
+            }
+        }
 
-             addedShoe.shoe?.let { shoeList.add(it) }
+        Log.i("ShoeListingFragment", activityViewModel.shoeList.value.toString())
 
-             Log.i("SheListingFragment", shoeList.toString())
-
-             Log.i("SheListingFragment", addedShoe.shoe.toString())
-       */
     }
 }
