@@ -16,6 +16,8 @@ import kotlin.properties.Delegates
 
 class NewShoeFragment : Fragment() {
 
+    //setting up the values that the Shoe data class holds
+
     private lateinit var binding: FragmentNewShoeBinding
     private lateinit var shoe: Shoe
     private lateinit var nameValue: String
@@ -37,9 +39,15 @@ class NewShoeFragment : Fragment() {
             navigateToNextScreen()
         }
 
+        binding.cancelButton.setOnClickListener {
+            navigateToNextScreen()
+        }
+
         return binding.root
     }
 
+
+    //adding shoe and verifying value of sizeValue if it is NULL.
     private fun addShoe(){
 
         nameValue = binding.nameText.text.toString()
@@ -49,16 +57,18 @@ class NewShoeFragment : Fragment() {
 
         shoe = Shoe(nameValue, sizeValue, companyValue, descriptionValue)
 
-      //  Log.i("NewShoeFragment", shoe.toString())
-        if (sizeValue == null){
+        //If none of these value have been filled by the user then the system will not add a list
+        if (sizeValue == null && nameValue == "" && companyValue =="" && descriptionValue =="") {
             return
         }
         else
         activityViewModel.addToList(shoe)
     }
 
+    //setting navigation in reusable method
     private fun navigateToNextScreen(){
         val action = NewShoeFragmentDirections.actionNewShoeFragmentToShoeListingFragment()
         findNavController(this).navigate(action)
     }
+
 }

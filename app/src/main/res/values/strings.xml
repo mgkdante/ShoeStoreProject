@@ -31,4 +31,18 @@
     <string name="sign_up_button_to_move_to_welcome_screen">Sign Up button to move to welcome screen</string>
     <string name="sign_in_button_to_move_to_welcome_screen">Sign In button to move to welcome screen</string>
     <string name="move_to_instructions">move to instructions</string>
+    <string name="shoe_name">Shoe name:</string>
+    <string name="shoe_size">Shoe size:</string>
+    <string name="shoe_brand">Shoe brand:</string>
+    <string name="shoe_description">Shoe Description:</string>
+    <string name="add_shoe_">Add Shoe</string>
+    <string name="cancel_add">Cancel add</string>
+    <string name="cancel">Cancel</string>
+    <string name="to_go_to_listing">to go to listing</string>
+    <string name="to_add_a_new_shoe_please_follow_these_steps">To add a new shoe please follow these steps</string>
+    <string name="to_add_a_new_shoe_please_follow_these_steps_">To add a new shoe please follow these steps:</string>
+    <string name="_1_click_on_continue_to_go_to_the_shoe_listing_screen">1- Click on continue to go to the shoe listing screen</string>
+    <string name="_2_on_the_next_screen_click_on_the_plus_sign">2- On the next screen click on the \'plus\' sign</string>
+    <string name="_3_you_will_be_directed_to_a_third_screen_where_you_will_be_able_top_enter_the_shoe_information">3- You will be directed to a third screen where you will be able top enter the shoe information</string>
+    <string name="_4_once_the_information_filled_just_simply_click_add_shoe">4- Once the information filled just simply click \'Add shoe\'</string>
 </resources>

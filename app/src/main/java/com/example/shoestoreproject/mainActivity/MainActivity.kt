@@ -20,10 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
+        //inflating tool bar
         setSupportActionBar(binding.toolbar)
 
+        //identifying the fragment holder
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
+        //Setting screen that up button does not go back to
         appBarConfiguration = AppBarConfiguration(topLevelDestinationIds = setOf(R.id.loginFragment,R.id.welcomeFragment,R.id.instructionsFragment),
         fallbackOnNavigateUpListener = ::onSupportNavigateUp)
 

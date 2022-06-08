@@ -11,6 +11,67 @@
         tools:contect=".instructions.InstructionFragment"
         >
 
+        <TextView
+            android:id="@+id/introText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/to_add_a_new_shoe_please_follow_these_steps_"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/step1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/_1_click_on_continue_to_go_to_the_shoe_listing_screen"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/introText" />
+
+        <TextView
+            android:id="@+id/step2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/_2_on_the_next_screen_click_on_the_plus_sign"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step1Text" />
+
+        <TextView
+            android:id="@+id/step3Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/_3_you_will_be_directed_to_a_third_screen_where_you_will_be_able_top_enter_the_shoe_information"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step2Text" />
+
+        <TextView
+            android:id="@+id/step4Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4_once_the_information_filled_just_simply_click_add_shoe"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/step3Text"
+            app:layout_constraintVertical_bias="0.233" />
+
         <Button
             android:id="@+id/instructions_button"
             android:layout_width="wrap_content"
@@ -21,7 +82,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.946"
             app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/button_to_go_to_listing"/>
+            android:contentDescription="@string/to_go_to_listing"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

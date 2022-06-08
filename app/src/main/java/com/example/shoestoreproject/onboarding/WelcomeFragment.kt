@@ -27,6 +27,7 @@ class WelcomeFragment : Fragment() {
         return binding.root
     }
 
+    //setting controller to navigate to instructions fragment
     private fun navigateToList(){
         findNavController().navigate(R.id.instructionsFragment)
     }

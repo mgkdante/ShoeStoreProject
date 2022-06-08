@@ -54,16 +54,31 @@
         android:inputType="textMultiLine"
         android:minHeight="200dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/addShoeButton"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10sp"
         android:clickable="true"
         android:contentDescription="@string/add_shoe"
         android:focusable="true"
-        app:srcCompat="@android:drawable/ic_input_add"
+        android:text="@string/add_shoe_"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         tools:ignore="ImageContrastCheck" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:contentDescription="@string/cancel_add"
+        android:focusable="true"
+        android:text="@string/cancel"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:ignore="ImageContrastCheck,TextContrastCheck" />
 
 
 </LinearLayout>

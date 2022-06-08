@@ -19,11 +19,11 @@ class InstructionsFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
 
+        //Setting click listener to navigate to next screen
         binding.instructionsButton.setOnClickListener {
                 view -> view.findNavController().navigate(R.id.shoeListingFragment)
         }
 
-        setHasOptionsMenu(true)
         return binding.root
     }
 
