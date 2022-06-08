@@ -49,32 +49,29 @@ class ShoeListingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         activityViewModel.shoeList.observe(viewLifecycleOwner) {
-                activityViewModel.shoeList.value?.forEach {
-                    val itemBinding = ListItemViewBinding.inflate(
-                        LayoutInflater.from(requireContext()),
-                        binding.linearLayoutList,
-                        false
-                    )
+            activityViewModel.shoeList.value?.forEach {
+                val itemBinding = ListItemViewBinding.inflate(
+                    LayoutInflater.from(requireContext()),
+                    binding.linearLayoutList,
+                    false
+                )
 
-                    itemBinding.CompanyView.text = it.company
-                    itemBinding.nameView.text = it.name
-                    itemBinding.sizeView.text = it.size.toString()
-                    itemBinding.descriptionView.text = it.description
+                itemBinding.CompanyView.text = it.company
+                itemBinding.nameView.text = it.name
+                itemBinding.sizeView.text = it.size.toString()
+                itemBinding.descriptionView.text = it.description
 
-                    if (itemBinding.sizeView.text == "null"){
-                        return@forEach
-                    }
-                    else binding.linearLayoutList.addView(itemBinding.root)
-                }
-
+                binding.linearLayoutList.addView(itemBinding.root)
             }
-        Log.i("ShoeListingFragment", activityViewModel.shoeList.value.toString())
+            Log.i("ShoeListingFragment", activityViewModel.shoeList.value.toString())
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu, menu)
     }
+
    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val action = ShoeListingFragmentDirections.actionShoeListingFragmentToLoginFragment()
         NavHostFragment.findNavController(this).navigate(action)

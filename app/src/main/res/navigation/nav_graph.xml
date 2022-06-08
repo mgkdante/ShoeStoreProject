@@ -69,7 +69,7 @@
     <fragment
         android:id="@+id/newShoeFragment"
         android:name="com.example.shoestoreproject.newShoe.NewShoeFragment"
-        android:label="newShoeFragment"
+        android:label="NewShoeFragment"
         tools:layout="@layout/fragment_new_shoe">
         <action
             android:id="@+id/action_newShoeFragment_to_shoeListingFragment"

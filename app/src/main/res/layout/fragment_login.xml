@@ -48,6 +48,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="24dp"
         android:text="@string/login"
+        android:contentDescription="@string/sign_in_button_to_move_to_welcome_screen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
 
@@ -59,7 +60,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.263"
             app:layout_constraintStart_toEndOf="@+id/loginButton"
-            app:layout_constraintTop_toTopOf="@+id/loginButton" />
+            app:layout_constraintTop_toTopOf="@+id/loginButton"
+            android:contentDescription="@string/sign_up_button_to_move_to_welcome_screen"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

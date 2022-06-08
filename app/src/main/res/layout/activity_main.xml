@@ -16,13 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar" />
+            android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+            android:contentDescription="@string/toolbar_that_serves_as_appbar_with_navigation"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/child_fragments_are_viewed_here"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph" />
     </LinearLayout>

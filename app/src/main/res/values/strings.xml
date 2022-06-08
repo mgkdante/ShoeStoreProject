@@ -25,4 +25,10 @@
     <string name="instructions_fragment">instructions_fragment</string>
     <string name="shoelistingfragment">shoeListingFragment</string>
     <string name="loginfragment">logInFragment</string>
+    <string name="toolbar_that_serves_as_appbar_with_navigation">Toolbar that serves as Appbar with navigation</string>
+    <string name="child_fragments_are_viewed_here">Child Fragments are viewed here</string>
+    <string name="button_to_go_to_listing">Button to go to listing</string>
+    <string name="sign_up_button_to_move_to_welcome_screen">Sign Up button to move to welcome screen</string>
+    <string name="sign_in_button_to_move_to_welcome_screen">Sign In button to move to welcome screen</string>
+    <string name="move_to_instructions">move to instructions</string>
 </resources>
