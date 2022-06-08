@@ -1,17 +1,16 @@
 package com.example.shoestoreproject.newShoe
 
 import android.os.Bundle
-import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.shoestoreproject.R
 import com.example.shoestoreproject.databinding.FragmentNewShoeBinding
-import com.example.shoestoreproject.main.ActivityViewModel
+import com.example.shoestoreproject.mainActivity.ActivityViewModel
 import com.example.shoestoreproject.models.Shoe
 import kotlin.properties.Delegates
 
@@ -22,7 +21,6 @@ class NewShoeFragment : Fragment() {
     private lateinit var nameValue: String
     private lateinit var companyValue: String
     private lateinit var descriptionValue: String
-    private var sizeValue by Delegates.notNull<Double>()
     private val activityViewModel: ActivityViewModel by activityViewModels()
 
 
@@ -33,28 +31,34 @@ class NewShoeFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_new_shoe, container, false)
 
+
         binding.addShoeButton.setOnClickListener{
-            shoeAdded()
+            addShoe()
+            navigateToNextScreen()
         }
 
         return binding.root
     }
 
-    private fun shoeAdded(){
+    private fun addShoe(){
 
         nameValue = binding.nameText.text.toString()
         companyValue = binding.companyText.text.toString()
         descriptionValue = binding.descriptionText.text.toString()
-        sizeValue = binding.sizeText.text.toString().toDouble()
+        val sizeValue = binding.sizeText.text.toString().toDoubleOrNull()
 
         shoe = Shoe(nameValue, sizeValue, companyValue, descriptionValue)
 
       //  Log.i("NewShoeFragment", shoe.toString())
-
+        if (sizeValue == null){
+            return
+        }
+        else
         activityViewModel.addToList(shoe)
-
-       val action = NewShoeFragmentDirections.actionNewShoeFragmentToShoeListingFragment()
-        findNavController(this).navigate(action)
     }
 
+    private fun navigateToNextScreen(){
+        val action = NewShoeFragmentDirections.actionNewShoeFragmentToShoeListingFragment()
+        findNavController(this).navigate(action)
+    }
 }

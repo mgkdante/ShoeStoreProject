@@ -20,4 +20,9 @@
     <string name="size">Size</string>
     <string name="add_shoe">Add_shoe</string>
     <string name="textview">TextView</string>
+    <string name="add_new_item_message_empty">The List is empty! Try adding a new item by clicking on the plus sign at the bottom right corner!</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="instructions_fragment">instructions_fragment</string>
+    <string name="shoelistingfragment">shoeListingFragment</string>
+    <string name="loginfragment">logInFragment</string>
 </resources>

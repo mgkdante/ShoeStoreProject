@@ -1,6 +1,5 @@
-package com.example.shoestoreproject.main
+package com.example.shoestoreproject.mainActivity
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

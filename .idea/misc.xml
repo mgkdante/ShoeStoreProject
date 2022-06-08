@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout-v21/activity_main.xml" value="0.1765625" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/empty_list.xml" value="0.18385416666666668" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_instructions.xml" value="0.22" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_login.xml" value="0.22" />
-        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_new_shoe.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_shoe_listing.xml" value="0.25" />
+        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_new_shoe.xml" value="0.25" />
+        <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_shoe_listing.xml" value="0.22" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/fragment_welcome.xml" value="0.300561797752809" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/layout/list_item_view.xml" value="0.22" />
         <entry key="..\:/Users/Otalo/AndroidStudioProjects/ShoeStoreProject/app/src/main/res/menu/menu.xml" value="0.271875" />
