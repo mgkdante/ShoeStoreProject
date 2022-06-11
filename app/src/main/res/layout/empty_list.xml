@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Layout to implement databinding-->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<androidx.constraintlayout.widget.ConstraintLayout
+
+    <!--Constraint allows to put a text in the center by applying constraints on every side-->
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minHeight="500dp">

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Layout to implement databinding-->
+
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
+            name="viewModel"
+            type="com.example.shoestoreproject.mainActivity.ActivityViewModel" />
+        <variable
             name="shoeDataClass"
             type="com.example.shoestoreproject.models.Shoe" />
     </data>
-<LinearLayout
+
+    <!--Linear Layout makes a form look better since it will apply equal spacing between rows.-->
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -20,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
         android:hint="@string/name"
+        android:text="@={shoeDataClass.name}"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
@@ -29,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
+        android:text="@={shoeDataClass.company}"
         android:hint="@string/company"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
@@ -40,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
         android:hint="@string/size"
+        android:text="@={shoeDataClass.size}"
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp" />
@@ -48,24 +58,26 @@
         android:id="@+id/descriptionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@={shoeDataClass.description}"
         android:layout_marginTop="30sp"
         android:hint="@string/description"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:minHeight="200dp" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/addShoeButton"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:contentDescription="@string/add_shoe"
-        android:focusable="true"
-        android:text="@string/add_shoe_"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        tools:ignore="ImageContrastCheck" />
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addShoeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:contentDescription="@string/add_shoe"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onSaveState(shoeDataClass.name, shoeDataClass.size, shoeDataClass.company, shoeDataClass.description)}"
+            android:text="@string/add_shoe_"
+            android:textAlignment="center"
+            android:textColor="#5E35B1"
+            tools:ignore="ImageContrastCheck" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/cancel_button"
