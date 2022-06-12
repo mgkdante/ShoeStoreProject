@@ -9,6 +9,9 @@
             type="com.example.shoestoreproject.models.Shoe" />
     </data>
 
+    <!--Since I wanted to go a non-list approach I decided to use Layout Constraint in
+    order to be able to put the name, size and brand on the same line-->
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
